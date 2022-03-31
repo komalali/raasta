@@ -56,7 +56,7 @@ def find_all_permits():
     i = int(current_month)
     found = {}
     while i <= 10:
-        r = requests.get(f"https://www.recreation.gov/api/permits/233273/availability/month?start_date=2021-{current_month}-01T00:00:00.000Z&commercial_acct=false&is_lottery=false", headers=headers)
+        r = requests.get(f"https://www.recreation.gov/api/permits/233273/availability/month?start_date=2022-{current_month}-01T00:00:00.000Z&commercial_acct=false&is_lottery=false", headers=headers)
         payload = r.json()["payload"]["availability"]
         permits_for_month = find_permits(payload)
         if len(permits_for_month) > 0:

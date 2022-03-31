@@ -1,7 +1,5 @@
-import os
 from datetime import date
 from munge import find_all_permits
-from notify import send_dm
 
 def main():
     found = find_all_permits()
